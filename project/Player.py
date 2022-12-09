@@ -1,12 +1,10 @@
-import pygame as pg
-import numpy as np
 from Global import *
 
 
 class Player:
     def __init__(self, coord, ang, spd, omega):
         self.coord = np.array(coord)
-        self.ang = -ang
+        self.ang = ang
         self.spd = spd
         self.omega = omega
 

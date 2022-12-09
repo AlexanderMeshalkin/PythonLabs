@@ -1,8 +1,5 @@
-import pygame as pg
-import numpy as np
-from Global import *
 from ray_module import *
-from global_objects import *
+from Global import *
 
 class Beam:
     def __init__(self, lmap, coord_1, ang, length, height, thickness, qual):
@@ -34,7 +31,7 @@ class Beam:
                 angle += 2 * np.pi
             Angle.append(angle)
             # Calculating drawing props via raycast
-            hor_vec, ver_vec, hor_cell, ver_cell = ray(Level, obs.coord, angle)
+            hor_vec, ver_vec, hor_cell, ver_cell = ray(Level, player.coord, angle)
             Visible.append(min(mag(ver_vec), mag(hor_vec)) > dist)
 
         for i in range(self.qual - 1):

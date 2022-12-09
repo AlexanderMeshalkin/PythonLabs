@@ -5,5 +5,10 @@ from ray_module import *
 from weapons import *
 from Global import *
 from Player import *
+from Beam import *
 
-obs = Player([104, 104], np.pi / 2, 200, 5)
+
+class Enemy:
+    def __init__(self, pos, size):
+        self.pos = np.array(pos)
+        self.size = size
